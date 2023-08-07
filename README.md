@@ -1,6 +1,6 @@
 # alx_higher_level_programming Repository
 
-Welcome to the alx_higher_level_programming repository! This repository is dedicated to advancing your programming skills in higher-level languages and covers a variety of topics and exercises.
+Welcome to the `alx_higher_level_programming` repository! This repository is dedicated to advancing your programming skills in higher-level languages and covers a variety of topics and exercises.
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@ Welcome to the alx_higher_level_programming repository! This repository is dedic
 
 ## Repository Overview
 
-The alx_higher_level_programming repository is organized into multiple directories, each focusing on a specific topic. Here are the main directories within the repository:
+The `alx_higher_level_programming` repository is organized into multiple directories, each focusing on a specific topic. Here are the main directories within the repository:
 
 - [0x00-python-hello_world](./0x00-python-hello_world): Introduction to Python programming with basic "Hello, World!" programs.
 
@@ -27,7 +27,7 @@ git clone https://github.com/your-username/alx_higher_level_programming.git
 ```
 2. Navigate to the repository directory:
 ```
-cd alx-low_level_programming
+cd alx-higher_level_programming
 ```
 
 3. Explore the various directories to find exercises and examples related to different topics.
