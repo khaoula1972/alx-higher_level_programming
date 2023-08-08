@@ -6,7 +6,7 @@ n = abs(number) % 10
 if number < 0:
     n = -n
 
-print("Last digit of {:d} is {:d}".format(number, n), end = "")
+print("Last digit of {:d} is {:d}".format(number, n), end="")
 
 if n < 6 and n != 0:
     print(" and is less than 6 and not 0")
