@@ -2,9 +2,9 @@
 def print_matrix_integer(matrix=[[]]):
     if not matrix:
         return
-    C = len(matrix[0])
     L = len(matrix)
     for i in range(L):
+        C = len(matrix[i])
         for j in range(C):
             e = " "
             if j == C - 1:
