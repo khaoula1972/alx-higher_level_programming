@@ -9,5 +9,5 @@ def print_matrix_integer(matrix=[[]]):
             if j < C - 1:
                 e = " "
             elif j == C - 1:
-                e = "\n"
+                e = ""
             print("{:d}".format(matrix[i][j]), end=e)
