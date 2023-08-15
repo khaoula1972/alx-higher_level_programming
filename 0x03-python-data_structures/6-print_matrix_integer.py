@@ -6,7 +6,8 @@ def print_matrix_integer(matrix=[[]]):
     for i in range(L):
         C = len(matrix[i])
         for j in range(C):
-            e = " "
-            if j == C - 1:
+            if j < C - 1:
+                e = " "
+            elif j == C - 1:
                 e = "\n"
             print("{:d}".format(matrix[i][j]), end=e)
