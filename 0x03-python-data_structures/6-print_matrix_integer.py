@@ -11,3 +11,4 @@ def print_matrix_integer(matrix=[[]]):
             elif j == C - 1:
                 e = ""
             print("{:d}".format(matrix[i][j]), end=e)
+        print()
