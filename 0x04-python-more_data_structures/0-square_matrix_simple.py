@@ -1,6 +1,6 @@
 #!/usr/bin/python
 def square_matrix_simple(matrix=[]):
-    new = list()
+    new = list() """ Copy of the list """
     L = len(matrix)
     if L == 0:
         return None
