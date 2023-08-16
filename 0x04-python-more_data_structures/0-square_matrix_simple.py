@@ -1,11 +1,11 @@
 #!/usr/bin/python
 def square_matrix_simple(matrix=[]):
-    new = list() """ Copy of the list """
+    new = list()
     L = len(matrix)
-    if L == 0:
-        return None
+    C = len(matrix[0])
     for i in range(L):
-        C = len(matrix[i])
+        k = list()
         for j in range(C):
-            new[i][j] = matrix[i][j]^2
+            k.append(matrix[i][j]**2)
+        new.append(k)
     return (new)
