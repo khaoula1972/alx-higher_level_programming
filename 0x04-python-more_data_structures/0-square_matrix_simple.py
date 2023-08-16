@@ -7,5 +7,5 @@ def square_matrix_simple(matrix=[]):
     for i in range(L):
         C = len(matrix[i])
         for j in range(C):
-            new[i][j] = matrix[i][j]
+            new[i][j] = matrix[i][j]^2
     return (new)
