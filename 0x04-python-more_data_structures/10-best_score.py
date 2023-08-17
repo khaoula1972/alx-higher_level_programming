@@ -4,8 +4,8 @@ def best_score(a_dictionary):
         return (None)
 
     # Store the first value in the dic
-    big = next(iter(a_dictionary))
-    bigger = ""
+    bigger = next(iter(a_dictionary))
+    big = a_dictionary[bigger]
 
     for key in a_dictionary.keys():
         if big < a_dictionary[key]:
