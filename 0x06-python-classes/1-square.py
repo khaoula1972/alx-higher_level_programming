@@ -13,11 +13,11 @@ class Square:
     """
 
     def __init__(self, size):
-    """
-    Initialize a square with the given side length.
-    
-    Args:
-        size: The length of all sides of the square.
-        type: float or int
-    """
+        """
+        Initialize a square with the given side length.
+
+        Args:
+            size: The length of all sides of the square.
+            type: float or int
+        """
         self.__size = size
