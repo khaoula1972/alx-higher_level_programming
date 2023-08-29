@@ -3,6 +3,7 @@
 An empty class called Square
 """
 
+
 class Square:
     """
     This class represents a square.
