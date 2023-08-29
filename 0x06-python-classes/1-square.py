@@ -17,7 +17,7 @@ class Square:
     Initialize a square with the given side length.
     
     Args:
-        :param size: The length of all sides of the square.
-        :type: float or int
+        size: The length of all sides of the square.
+        type: float or int
     """
         self.__size = size
