@@ -15,7 +15,9 @@ class Square:
     def __init__(self, size):
     """
     Initialize a square with the given side length.
-    :param size: The length of all sides of the square.
-    :type: float or int
+    
+    Args:
+        :param size: The length of all sides of the square.
+        :type: float or int
     """
-        self._size = size
+        self.__size = size
