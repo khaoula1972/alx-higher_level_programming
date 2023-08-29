@@ -30,10 +30,10 @@ class Square:
     def area(self):
         """
         Compute the area of a square with a given side length.
-        
+
         Args:
             __size: the length of the side
-        
+
         Returns:
                 area of the square
         """
