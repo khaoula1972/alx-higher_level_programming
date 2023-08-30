@@ -16,9 +16,9 @@ class MagicClass:
     def __init__(self, radius=0):
         """
         Initialization of the circumference.
-	
-	Args:
-	    radius (float or int): The radius of the new MagicClass.
+
+        Args:
+        radius (float or int): The radius of the new MagicClass.
         """
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
