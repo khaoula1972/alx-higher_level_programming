@@ -4,8 +4,7 @@ import math
 
 class MagicClass:
     """
-    This class calculate the area and the perimeter of a circumantance
-    """
+    This class calculate the area and the perimeter of a circumantance"""
 
     def __init__(self, radius=0):
         self.__radius = 0
