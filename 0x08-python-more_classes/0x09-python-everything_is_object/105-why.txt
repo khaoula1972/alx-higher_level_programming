@@ -1,0 +1,5 @@
+This behavior of caching small integer objects is a performance optimization. Small integer objects are commonly used in Python programs, and by caching them, Python avoids the overhead of creating and destroying these objects repeatedly. This optimization significantly improves the performance of Python programs, especially in situations where integers within the cached range are used frequently.
+
+By reusing these cached integer objects, Python reduces memory allocation and deallocation overhead and also saves CPU cycles for object creation and destruction. This contributes to Python's efficiency and is one of the reasons it's well-suited for a wide range of applications, including scientific computing and web development.
+
+The specific range and behavior of cached integers might vary slightly between different Python implementations or versions, but the underlying principle remains the same: caching frequently used objects for performance gains.
