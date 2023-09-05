@@ -5,6 +5,7 @@ This module contains an algorithm that resolves the N-Queen puzzle
 using backtracking
 
 """
+import sys
 
 
 def is_safe(m_queen, nqueen):
@@ -81,8 +82,6 @@ def NQueenQuiz(size):
 
 
 if __name__ == '__main__':
-
-    import sys
 
     if len(sys.argv) == 1 or len(sys.argv) > 2:
         print("Usage: nqueens N")
