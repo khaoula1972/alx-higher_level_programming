@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """
-
 This module contains an algorithm that resolves the N-Queen puzzle
 using backtracking
-
 """
+
 import sys
 
 
@@ -24,9 +23,9 @@ def is_safe(m_queen, nqueen):
 
     for i in range(nqueen):
         if m_queen[i] == m_queen[nqueen]:
-            return False
+            return (False)
         if abs(m_queen[i] - m_queen[nqueen]) == abs(i - nqueen):
-            return False
+            return (False)
 
     return True
 
@@ -40,7 +39,6 @@ def print_result(m_queen, nqueen):
         nqueen: queen number
 
     """
-
     res = []
     for i in range(nqueen):
         res.append([i, m_queen[i]])
@@ -48,7 +46,8 @@ def print_result(m_queen, nqueen):
 
 
 def Queen(m_queen, nqueen):
-    """ Recursive function that executes the Backtracking algorithm
+    """
+    Recursive function that executes the Backtracking algorithm
 
     Args:
         m_queen: array that has the queens positions
@@ -69,15 +68,14 @@ def Queen(m_queen, nqueen):
 
 
 def NQueenQuiz(size):
-    """ Function that invokes the Backtracking algorithm
+    """
+    Function that invokes the Backtracking algorithm
 
     Args:
         size: size of the chessboard
 
     """
-
     m_queen = [-1 for i in range(size)]
-
     Queen(m_queen, 0)
 
 
@@ -96,5 +94,4 @@ if __name__ == '__main__':
     if size < 4:
         print("N must be at least 4")
         sys.exit(1)
-
     NQueenQuiz(size)
