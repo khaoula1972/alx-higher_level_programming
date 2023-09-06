@@ -2,7 +2,9 @@
 
 
 """
+
 This module takes a matrix and div then divide them
+
 """
 
 
@@ -20,7 +22,6 @@ def matrix_divided(matrix, div):
         The new divided matrix
 
     """
-
     # The messages
     msg_type = "matrix must be a matrix (list of lists) of integers/floats"
     msg_size = "Each row of the matrix must have the same size"
@@ -30,6 +31,8 @@ def matrix_divided(matrix, div):
     if not isinstance(matrix, list):
         raise TypeError(msg_type)
     else:
+        if matrix == []:
+            raise TypeError(msg_type)
         for element in matrix:
             if not isinstance(element, list):
                 raise TypeError(msg_type)
@@ -44,7 +47,7 @@ def matrix_divided(matrix, div):
     if not (isinstance(div, int) or isinstance(div, float)):
         raise TypeError(msg_div_type)
     elif div == 0:
-        raise TypeError(msg_div_zero)
+        raise ZeroDivisionError(msg_div_zero)
 
     new = []
 
