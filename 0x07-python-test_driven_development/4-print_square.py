@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+
+This module contains a function that prints a square
+
+"""
+
+
 def print_square(size):
     """
     Function: print_square
