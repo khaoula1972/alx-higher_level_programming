@@ -1,28 +1,34 @@
 #include <stdio.h>
+#include <string.h>
 #include <Python.h>
-#include <wchar.h>
+
 /**
- * print_python_string - a function that prints Python strings.
- * @p: pointer to the string
+ * print_python_string - Prints string information
+ *
+ * @p: Python Object
+ * Return: no return
  */
 void print_python_string(PyObject *p)
 {
-        wchar_t *str;
-        int compact;
-        Py_ssize_t len;
 
-        printf("[.] string object info\n");
-        if (!PyUnicode_Check(p))
-        {
-                fprintf(stderr, " [ERROR] Invalid String Object\n");
-                return;
-        }
+	PyObject *str, *repr;
 
-        str = PyUnicode_AsWideCharString(p, NULL);
-        len = PyUnicode_GET_SIZE(p);
-        compact = PyUnicode_IS_COMPACT_ASCII(p) ? 1 : 0;
+	(void)repr;
+	printf("[.] string object info\n");
 
-        printf(" type: %s %s\n", compact ? "compact" : "compact unicode", compact ? "ascii" : "object");
-        printf(" length: %ld\n", len);
-        printf(" value: %ls\n", str);
+	if (strcmp(p->ob_type->tp_name, "str"))
+	{
+		printf("  [ERROR] Invalid String Object\n");
+		return;
+	}
+
+	if (PyUnicode_IS_COMPACT_ASCII(p))
+		printf("  type: compact ascii\n");
+	else
+		printf("  type: compact unicode object\n");
+
+	repr = PyObject_Repr(p);
+	str = PyUnicode_AsEncodedString(p, "utf-8", "~E~");
+	printf("  length: %ld\n", PyUnicode_GET_SIZE(p));
+	printf("  value: %s\n", PyBytes_AsString(str));
 }
