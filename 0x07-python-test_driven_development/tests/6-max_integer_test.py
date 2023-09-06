@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """Unittest for max_integer([..])
 """
 import unittest
@@ -16,7 +15,7 @@ class TestMaxInteger(unittest.TestCase):
         Method that checks if empty list is handled
         """
         self.assertIsNone(max_integer([]))
-        
+
     def test_positive(self):
         """
         Method that checks if positive numbers are handeled
@@ -51,19 +50,50 @@ class TestMaxInteger(unittest.TestCase):
         """
         Method that checks if long lists are handeled
         """
-        self.assertEqual(max_integer([1200, 800, 990,
-            600, 1540, 1200, 588, 2266, 2584, 1235, 900,
-            1200, 800, 905, 800, 12000, 5884, 5668, 800,
-            254, 488, 6524, 568, 5584, 54425, 487,]), 54425)
+        self.assertEqual(
+                max_integer([1200, 800, 990, 600, 1540, 1200,
+                            588, 2266, 2584, 1235, 900, 1200, 800,
+                            905, 800, 12000, 5884, 5668, 800, 254,
+                            488, 6524, 568, 5584, 54425, 487]),
+                54425)
 
     def test_loop(self):
         """
         Method that checks if loop lists are handeled
         """
-        self.assertEqual(max_integer([x**2 for x in range (10)]), 81)
+        self.assertEqual(max_integer([x**2 for x in range(10)]), 81)
 
     def test_operated(self):
         """
         Method that checks if operated lists are handeled
         """
-        self.assertEqual(max_integer([5 - 3, 58 * 2, 5 / 2, 6 * 7, 9 + 1]), 116)
+        self.assertEqual(
+                max_integer([5 - 3, 58 * 2, 5 / 2, 6 * 7, 9 + 1]), 116)
+
+    def test_string(self):
+        """
+        Method that checks if strings are errored correctly
+        """
+        with self.assertRaises(TypeError):
+            max_integer([1, '7'])
+
+    def test_tuple(self):
+        """
+        Method that checks if tuples are errored correctly
+        """
+        with self.assertRaises(TypeError):
+            max_integer([10, (20, 30)])
+
+    def test_dict(self):
+        """
+        Method that checks if dic are errored correctly
+        """
+        with self.assertRaises(KeyError):
+            max_integer({'key1': 1, 'key2': 2})
+
+    def test_num(self):
+        """
+        Method that checks if numbers are errored
+        """
+        with self.assertRaises(TypeError):
+            max_integer(1)
