@@ -31,6 +31,7 @@ def text_indentation(text):
         copy_text = ""
         for i in list_text:
             i = i.strip(" ")
-            copy_text = i + d if copy_text is "" else copy_text + "\n\n" + i + d
-    
+            copy_text = i + d if copy_text is "" else \
+                copy_text + "\n\n" + i + d
+
     print(copy_text[:-3], end="")
