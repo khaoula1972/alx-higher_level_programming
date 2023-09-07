@@ -12,22 +12,4 @@ class LockedClass:
     Secret class
     """
 
-    def __setattr__(self, attr, value):
-        """
-        Method that allows the creation of first_name attribute but prevents
-        the creation of any other instance attributes.
-        """
-        msg = "'LockedClass' object has no attribute"
-        if attr == 'first_name':
-            super().__setattr__(attr, value)
-        else:
-            raise AttributeError(msg+" '{}'".format(attr))
-
-    def __getattribute__(self, attr):
-        """
-        Method that doesn't allow getting the attribute
-        """
-        msg = "'LockedClass' object has no attribute"
-        if attr == '__dict__':
-            raise AttributeError(msg+" '{}'".format(attr))
-        return super().__getattribute__(attr)
+    __slots__ = ['first_name']
