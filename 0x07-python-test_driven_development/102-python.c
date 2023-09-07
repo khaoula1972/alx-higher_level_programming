@@ -15,7 +15,7 @@ void print_python_string(PyObject *p)
 
     if (!PyUnicode_Check(p))
     {
-        fprintf(stderr, " [ERROR] Invalid String Object\n");
+        fprintf(stderr, "  [ERROR] Invalid String Object\n");
         return;
     }
 
@@ -24,14 +24,14 @@ void print_python_string(PyObject *p)
 
     if (!str)
     {
-        fprintf(stderr, " [ERROR] Unable to convert to Unicode\n");
+        fprintf(stderr, "  [ERROR] Unable to convert to Unicode\n");
         return;
     }
 
-    printf(" type: %s %s\n", PyUnicode_IS_COMPACT_ASCII(p) ? "compact" : "compact unicode", PyUnicode_IS_COMPACT_ASCII(p) ? "ascii" : "object");
-    printf(" length: %ld\n", len);
+    printf("  type: %s %s\n", PyUnicode_IS_COMPACT_ASCII(p) ? "compact" : "compact unicode", PyUnicode_IS_COMPACT_ASCII(p) ? "ascii" : "object");
+    printf("  length: %ld\n", len);
 
-    printf(" value: ");
+    printf("  value: ");
     for (i = 0; i < len; i++)
     {
         wchar_t ch = str[i];
