@@ -4,7 +4,7 @@
 
 /**
  * print_python_string - a function that prints Python strings.
- * @p: pointer to the string
+ * @p: pointer to the string.
  */
 void print_python_string(PyObject *p)
 {
