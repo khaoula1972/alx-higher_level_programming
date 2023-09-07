@@ -70,6 +70,12 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(
                 max_integer([5 - 3, 58 * 2, 5 / 2, 6 * 7, 9 + 1]), 116)
 
+    def test_atbegining(self):
+        """
+        Method that checks if max at the beginning is handeled
+        """
+        self.assertEqual(max_integer([50, 0, 9]), 50)
+
     def test_string(self):
         """
         Method that checks if strings are errored correctly
