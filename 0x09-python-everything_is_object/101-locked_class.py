@@ -22,3 +22,12 @@ class LockedClass:
             super().__setattr__(attr, value)
         else:
             raise AttributeError(msg+" '{}'".format(attr))
+
+    def __getattribute__(self, attr):
+        """
+        Method that doesn't allow getting the attribute
+        """
+        msg = "'LockedClass' object has no attribute"
+        if attr == '__dict__':
+            raise AttributeError(msg+" '{}'".format(attr))
+        return super().__getattribute__(attr)
