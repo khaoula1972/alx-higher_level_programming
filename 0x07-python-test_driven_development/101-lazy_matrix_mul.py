@@ -24,5 +24,4 @@ def lazy_matrix_mul(m_a, m_b):
             multiplied.
 
     """
-    C = np.dot(np.array(m_a), np.array(m_b))
-    return (C)
+    return (np.matmul(m_a, m_b))
