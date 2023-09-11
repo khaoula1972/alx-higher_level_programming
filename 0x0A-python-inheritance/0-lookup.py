@@ -14,6 +14,6 @@ def lookup(obj):
 
     Arg:
         obj: the object
-    
+
     """
     return (dir(obj))
