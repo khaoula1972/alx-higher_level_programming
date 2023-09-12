@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 
 """
-
 A module that contains a function that tells if the object is
-from a specified class
-
 """
 
 
