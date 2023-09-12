@@ -8,9 +8,9 @@ from a specified class
 """
 
 
-def is_same_class(obj, a_class):
+def is_kind_of_class(obj, a_class):
     """
-    A function that returns True if the object is exactly an instance
+    A function that returns True if the object is kind of an instance
     of the specified class ; otherwise False.
 
     Args:
