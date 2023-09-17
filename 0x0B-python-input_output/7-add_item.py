@@ -15,8 +15,7 @@ if __name__ == "__main__":
     except FileNotFoundError:
         existing_list = []
 
-    if len(sys.argv) > 2:
-        args = sys.argv[1:]
-        existing_list.extend(args)
+    args = sys.argv[1:]
+    existing_list.extend(args)
 
     save_to_json_file(existing_list, "add_item.json")
